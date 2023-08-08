@@ -2,7 +2,7 @@
 
 
 
-const recieveEntries = () => {
+const recieve_entrie = () => {
     let entries = localStorage.getItem("user-enteries");
     if (entries) {
         entries = JSON.parse(entries);
@@ -13,32 +13,32 @@ const recieveEntries = () => {
     return entries;
 }
 
-let userEnteries = recieveEntries();
+let userEnterie = recieve_entrie();
 
-const displayEnteries = () => {
-    const enteries = recieveEntries();
+const display_enteries = () => {
+    const enteries = recieve_entrie();
 
-    let tableEnteries = enteries.map((entry) => {
-        const ncell = `<td class="px-4">${entry.name}</td>`;
-        const ecell = `<td class="px-4">${entry.email}</td>`;
-        const pcell = `<td class="px-4">${entry.password}</td>`;
-        const dobcell = `<td class="px-4">${entry.dob}</td>`;
-        const taccell = `<td class="px-4">${entry.tac}</td>`;
+    let table_enteries = enteries.map((entry) => {
+        const n_cell = `<td class="px-4">${entry.name}</td>`;
+        const e_cell = `<td class="px-4">${entry.email}</td>`;
+        const p_cell = `<td class="px-4">${entry.password}</td>`;
+        const d_obcell = `<td class="px-4">${entry.dob}</td>`;
+        const t_accell = `<td class="px-4">${entry.tac}</td>`;
 
-        const row = `<tr>${ncell} ${ecell} ${pcell} ${dobcell} ${taccell}</tr>`;
+        const row = `<tr>${n_cell} ${e_cell} ${p_cell} ${d_obcell} ${t_accell}</tr>`;
         return row;
     }).join("");  
     const table = `<table class="table-fixed"><tr>
-        <th class="px-4">Name</th>
-        <th class="px-4">Email</th>
-        <th class="px-4">Password</th>
-        <th class="px-4">Dob</th>
-        <th class="px-4">Accepted terms?</th>
-    </tr>${tableEnteries} </table>`;
+        <th class="px-3">Name</th>
+        <th class="px-3">Email</th>
+        <th class="px-3">Password</th>
+        <th class="px-3">Dob</th>
+        <th class="px-3">Accepted terms?</th>
+    </tr>${table_enteries} </table>`;
 
-    let details = document.getElementById("user-enteries");
-    console.table(tableEnteries);
-    details.innerHTML = table;
+    let detail = document.getElementById("user-enteries");
+    console.table(table_enteries);
+    detail.innerHTML = table;
 }
 
 const saveForm = (event) => {
@@ -57,9 +57,9 @@ const saveForm = (event) => {
         tac
     };
 
-    userEnteries.push(entry);
-    localStorage.setItem("user-enteries", JSON.stringify(userEnteries));
+    userEnterie.push(entry);
+    localStorage.setItem("user-enteries", JSON.stringify(userEnterie));
 }
-displayEnteries();
+display_enteries();
 
 
