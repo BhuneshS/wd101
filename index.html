@@ -10,40 +10,40 @@
 </head>
 <body>
     <form onsubmit="saveForm()" id="myform" class="flex justify-center">
-        <div class="m-6">
-            <h2 class="block text-3xl">Registeration Form</h2>
+        <div class="m-4">
+            <h2 class="block text-4xl">Registeration Form</h2>
 
-            <div class="block mt-6 text-lg">
+            <div class="block mt-4 text-lg">
                 <label for="name">Name</label>
-                <input required type="text" name="name" id="name" class="">
+                <input required type="text" name="name" id="name" class="border-2 rounded-md">
             </div>
             
-            <div class="block text-lg mt-2">
+            <div class="block text-lg mt-1">
                 <label for="email">Email</label>
-                <input required type="email" name="emai" id="email" class="">
+                <input required type="email" name="emai" id="email" class="border-2 rounded-md">
             </div>
             
-            <div class="text-lg mt-2">
+            <div class="text-lg mt-1">
                 <label for="pass">Password</label>
-                <input required type="password" name="password" id="password" class="">
+                <input required type="password" name="password" id="password" class="border-2 rounded-md">
             </div>
             
-            <div class="text-lg mt-2">
+            <div class="text-lg mt-1">
                 <label for="dob">Date of Birth</label>
-                <input required type="date" name="dob" id="dob" class="" min="1968-03-07" max="2005-03-07">
+                <input required type="date" name="dob" id="dob" class="border-2 rounded-md" min="1968-08-08" max="2005-08-08">
             </div>
             
-            <div class="text-lg mt-2">
+            <div class="text-lg mt-1">
                 <input required type="checkbox" name="tac" id="tac">
                 <label for="tac">Accept terms and condition</label>
             </div>
             
-            <button type="submit" name="submit" id="submit" class="bg-green-400 p-1 rounded-md text-base mt-2">Submit</button>
+            <button type="submit" name="submit" id="submit" class="bg-green-600 p-1 rounded-md mt-1">Submit</button>
         </div>
     </form>
     <div class="flex justify-center mt-2">
-        <div id="table" class="">
-            <h2 class="block text-2xl text-center">Enteries</h2>
+        <div id="table" class="border rounded-lg">
+            <h2 class="block text-xl text-center">Enteries</h2>
             <div id="user-enteries"></div>
         </div>
     </div>
